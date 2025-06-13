@@ -19,13 +19,15 @@ else {
 
 function getUserMediaSuccess(stream){
     const mediaRecorder = new MediaRecorder(stream);
+    const startBtn = document.getElementById("startBtn");
+    const stopBtn = document.getElementById("stopBtn");
     let chunks = [];
 
-    document.getElementById("startBtn").onclick = () => {
+    startBtn.onclick = () => {
         mediaRecorder.start();
         console.log("started recording");
     };
-    document.getElementById("stopBtn").onclick = () => {
+    stopBtn.onclick = () => {
         mediaRecorder.stop();
         console.log("stopped recording");
     };
