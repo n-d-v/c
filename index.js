@@ -10,7 +10,7 @@ if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia){
         .then(stream => getUserMediaSuccess(stream))
 
         .catch(error => {
-            console.error(`${error} occured when configuring getUserMedia`)
+            console.error(`"${error}" occured when configuring getUserMedia`)
         });
 }
 else {
