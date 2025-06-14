@@ -24,14 +24,17 @@ function getUserMediaSuccess(stream){
     let chunks = [];
 
     startBtn.onclick = () => {
-        mediaRecorder.start();
         console.log("started recording");
+        mediaRecorder.start();
+        console.log("sucessfully started recording");
     };
     stopBtn.onclick = () => {
-        mediaRecorder.stop();
         console.log("stopped recording");
+        mediaRecorder.stop();
+        console.log("sucessfully stopped recording");
     };
     mediaRecorder.ondataavailable = (e) => {
         chunks.push(e.data);
+        console.log(chunks);
     };
 }
