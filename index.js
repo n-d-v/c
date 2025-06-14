@@ -31,7 +31,7 @@ function getUserMediaSuccess(stream){
         mediaRecorder.stop();
         console.log("stopped recording");
     };
-    mediaRecorder.ondataavailable = e => {
+    mediaRecorder.ondataavailable = (e) => {
         chunks.push(e.data);
     };
 }
