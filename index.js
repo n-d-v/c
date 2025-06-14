@@ -18,6 +18,7 @@ else {
 }
 
 function getUserMediaSuccess(stream){
+    console.log("successssssss");
     const mediaRecorder = new MediaRecorder(stream);
     const startBtn = document.getElementById("startBtn");
     const stopBtn = document.getElementById("stopBtn");
