@@ -34,7 +34,7 @@ function getUserMediaSuccess(stream){
         console.log("stopped recording");
         mediaRecorder.stop();
         console.log("sucessfully stopped recording");
-        chunkBytes = chunkBytes[0].bytes()
+        chunkBytes = chunks[0].bytes()
         console.log(chunks);
         console.log(chunkBytes);
     };
