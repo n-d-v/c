@@ -23,16 +23,20 @@ function getUserMediaSuccess(stream){
     const startBtn = document.getElementById("startBtn");
     const stopBtn = document.getElementById("stopBtn");
     let chunks = [];
+    let chunkBytes = [];
 
     startBtn.onclick = () => {
         console.log("started recording");
         mediaRecorder.start();
         console.log("sucessfully started recording");
     };
-    stopBtn.onclick = () => {
+    stopBtn.onclick = async () => {
         console.log("stopped recording");
         mediaRecorder.stop();
         console.log("sucessfully stopped recording");
+        chunkBytes = chunkBytes[0].bytes()
+        console.log(chunks);
+        console.log(chunkBytes);
     };
     mediaRecorder.ondataavailable = (e) => {
         chunks.push(e.data);
