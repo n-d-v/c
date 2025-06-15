@@ -37,12 +37,13 @@ function getUserMediaSuccess(stream){
         for (const i of chunks){
             console.log(i);
         }
-        chunkBytes = chunks[0].bytes();
         console.log(chunks);
+        chunkBytes = chunks[0].bytes();
         console.log(chunkBytes);
     };
     mediaRecorder.ondataavailable = (e) => {
         chunks.push(e.data);
         console.log(chunks);
+        console.log(chunks[0]);
     };
 }
